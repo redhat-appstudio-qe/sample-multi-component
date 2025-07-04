@@ -9,7 +9,8 @@ metadata:
     pipelinesascode.tekton.dev/max-keep-runs: "3"
     pipelinesascode.tekton.dev/on-cel-expression: event == "push" && target_branch
       == "multi-component-base-efaaka" && ( "python-component/***".pathChanged() ||
-      ".tekton/python-component-saesta-pull-request.yaml".pathChanged() )
+      ".tekton/python-component-saesta-pull-request.yaml".pathChanged() || "docker/Dockerfile".pathChanged()
+      )
   creationTimestamp: null
   labels:
     appstudio.openshift.io/application: build-suite-positive-mc-yawg
